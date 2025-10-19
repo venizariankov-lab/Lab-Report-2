@@ -1,0 +1,68 @@
+/*  
+
+Arduino Push Button (PB) Pull-Up program code 
+
+Goal of the program : Have the push button display 0 on the serial monitor when it's pressed and 1 when not 
+
+Theme : Digital Input  
+
+*/  
+
+ 
+ 
+
+int pushButton = 7; // Associating the PB with pin 10  
+
+ 
+ 
+
+// the setup function runs once when you press reset or power the board   
+
+void setup() {  
+
+ 
+
+pinMode(pushButton,INPUT); //PB is set as an Input  
+
+ 
+
+Serial.begin(9600); //Create connection to the serial monitor  
+
+ 
+ 
+
+}  
+
+ 
+ 
+
+// the loop function runs over and over again forever   
+
+void loop() {  
+
+ 
+ 
+
+int buttonState = digitalRead(pushButton); //read the value of PB as buttonstate  
+
+ 
+ 
+
+Serial.print("buttonState = "); //prints onto the serial monitor "buttonState =" 
+
+ 
+ 
+
+Serial.println(buttonState); //prints the value of buttonState and then starts a new line on the serial monitor 
+
+ 
+ 
+
+delay(1); //gives a delay of 1ms in between each print in the serial monitor 
+
+ 
+ 
+
+}  
+
+ 
