@@ -1,0 +1,38 @@
+/* 
+
+ Blinking code 
+
+ Goal of the program : Turns an LED on for one second, then off for two seconds, repeatedly. 
+
+ Themes : Digital Output 
+
+*/ 
+
+// the setup function runs once when you press reset or power the board 
+
+void setup() { 
+
+  // initialize digital pin 13 as an output. 
+
+  pinMode(13, OUTPUT); 
+
+} 
+
+// the loop function runs over and over again forever 
+
+void loop() { 
+
+  digitalWrite(13, HIGH);  // turn the LED on HIGH, which means on. This is done by setting the pin 13 to a logic HIGH (5V) 
+
+  delay(1000);                      // Keeps the LED on HIGH for 1 second 
+
+  digitalWrite(13, LOW);   // turn the LED on LOW, meaning off. This is done by setting the pin 13 to a logic LOW (0V) 
+
+  delay(2000);                      // Keeps the LED on LOW for 2 seconds 
+
+} 
+
+ 
+ 
+
+ 
