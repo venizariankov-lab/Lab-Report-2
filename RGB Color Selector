@@ -1,0 +1,87 @@
+/* 
+
+RGB Colour Selector program code 
+
+Goal of the program : Use PWM pins to change the intensity of the colors of the RGB in order to make a color that's different than Red, Green or Blue 
+
+Theme : Analog Output 
+
+*/ 
+
+ 
+ 
+
+int red = 11; //Associating pin 12 with the Red color of the RGB       
+
+ 
+ 
+
+int green = 10; //Associating pin 11 with the Green color of the RGB    
+
+ 
+ 
+
+int blue = 9; //Associating pin 10 with the Blue color of the RGB   
+
+ 
+ 
+
+// the setup function runs once when you press reset or power the board   
+
+void setup() {  
+
+ 
+ 
+
+// initialize analog pin 9, 10 and 11 as an output.     
+
+ 
+ 
+
+pinMode(11, OUTPUT);   
+
+ 
+ 
+ 
+
+pinMode(10, OUTPUT);   
+
+ 
+ 
+
+  
+
+pinMode(9, OUTPUT);   
+
+} 
+
+// the loop routine runs over and over again forever:    
+
+void loop() { 
+
+ 
+ 
+
+//give an analog value to each color, in order to be able to mix them and create a final color 
+
+ 
+ 
+
+analogWrite(red,250); 
+
+ 
+ 
+
+analogWrite(green,200); 
+
+ 
+ 
+
+analogWrite(blue,2); 
+
+ 
+ 
+
+} 
+
+ 
