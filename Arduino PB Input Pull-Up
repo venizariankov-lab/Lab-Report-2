@@ -1,0 +1,66 @@
+/*  
+
+Arduino PB (PB) Input Pull-Up program code 
+
+Goal of the program : When the PB is pressed, it's value is 0. When PB is not pressed, it's value is 1. Exactly the same as the Arduino Push Button (PB) Pull-Up, but the resistance is internal instead of external. 
+
+Theme: Digital Input  
+
+ 
+ 
+
+*/  
+
+int pushButton = 7; // Have pin 7 of the arduino associated with the PB  
+
+ 
+ 
+
+// the setup function runs once when you press reset or power the board     
+
+void setup() {   
+
+ 
+ 
+
+pinMode(pushButton,INPUT); //PB is set as a Input   
+
+ 
+ 
+
+Serial.begin(9600); //Create connection to the serial monitor 
+
+}   
+
+ 
+ 
+
+// the loop function runs over and over again forever     
+
+void loop() {   
+
+  
+
+int buttonState = digitalRead(pushButton); //read the value of PB as buttonstate   
+
+ 
+ 
+
+Serial.print("buttonState = "); //prints onto the serial monitor " buttonState = "   
+
+ 
+ 
+
+Serial.println(buttonState); //prints the value of buttonState and then starts a new line on the serial monitor   
+
+ 
+ 
+
+delay(1); //gives a delay of 1ms in between each print in the serial monitor   
+
+ 
+ 
+
+} 
+
+ 
