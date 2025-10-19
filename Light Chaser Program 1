@@ -1,0 +1,270 @@
+/*  
+
+Light Chaser 1 code 
+
+Goal of the program : Turns on LED in a sequence where it's only one LED that is on at a time and then comes back from the last pin to the first pin.  
+
+Themes : Digital output 
+
+*/  
+
+ 
+ 
+
+// Putting anything before void setup and loop means that this will apply to both automatically 
+
+ int timeDelay = 10; // create a variable named timeDelay with value 10 (milliseconds) 
+
+ 
+ 
+
+// the setup function runs once when you press reset or power the board  
+
+void setup() {  
+
+ 
+ 
+
+  // initialize digital pin 10, 11, 12, 13 as an output.  
+
+ 
+ 
+
+pinMode(10, OUTPUT);  
+
+ 
+ 
+
+pinMode(11, OUTPUT);  
+
+ 
+ 
+
+pinMode(12, OUTPUT);  
+
+ 
+ 
+
+pinMode(13, OUTPUT);  
+
+ 
+ 
+
+}  
+
+ 
+ 
+
+// the loop function runs over and over again forever  
+
+void loop() { // the sequence here is : LED on pin 10 → pin 11 → pin 12 → pin 13 → and then in reverse towards pin 10. This is done repeatedly 
+
+ 
+ 
+
+ digitalWrite(10, 1); // turn the LED on 
+
+ 
+ 
+
+ digitalWrite(11, 0); // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(12, 0);  // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(13,0); // keep the LED off 
+
+ 
+ 
+
+ delay(timeDelay); // the LED connected to pin 10 will stay on depending on the value of "timeDelay", which in this case has been set to 10 ms 
+
+ 
+ 
+
+ digitalWrite(10, 0);  // turn the LED off 
+
+ 
+ 
+
+ digitalWrite(11, 1); // turn the LED on 
+
+ 
+ 
+
+ digitalWrite(12, 0);   // keep the LED off  
+
+ 
+ 
+
+ digitalWrite(13,0); // keep the LED off 
+
+ 
+ 
+
+ delay(timeDelay); // LED connected to pin 11 will stay on for 10 ms 
+
+ 
+ 
+
+ digitalWrite(10, 0); // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(11, 0); // turn the LED off 
+
+ 
+ 
+
+ digitalWrite(12, 1);   // turn the LED on 
+
+ 
+ 
+
+ digitalWrite(13,0); // keep the LED off 
+
+ 
+ 
+
+ delay(timeDelay); // LED connected to pin 12 will stay on for 10 ms 
+
+ 
+ 
+
+ digitalWrite(10, 0); // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(11, 0); // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(12, 0);   // turn the LED off 
+
+ 
+ 
+
+ digitalWrite(13,1); // turn the LED on 
+
+ 
+ 
+
+ delay(timeDelay);  // LED connected to pin 13 will stay on for 10 ms 
+
+ 
+ 
+
+ digitalWrite(10, 0); // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(11, 0); // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(12, 0);   // turn the LED off 
+
+ 
+ 
+
+ digitalWrite(13,1); // keep the LED on 
+
+ 
+ 
+
+ delay(timeDelay);  // LED connected to pin 13 will stay on for 10 ms 
+
+ 
+ 
+
+ digitalWrite(10, 0); // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(11, 0); // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(12, 1);   // turn the LED on 
+
+ 
+ 
+
+ digitalWrite(13,0); // turn the LED off 
+
+ 
+ 
+
+ delay(timeDelay);  // LED connected to pin 12 will stay on for 10 ms 
+
+ 
+ 
+
+ digitalWrite(10, 0); // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(11, 1); // turn the LED on 
+
+ 
+ 
+
+ digitalWrite(12, 0);   // turn the LED off  
+
+ 
+ 
+
+ digitalWrite(13,0); // keep the LED off 
+
+ 
+ 
+
+ delay(timeDelay); // LED connected to pin 11 will stay on for 10 ms 
+
+ 
+ 
+
+ digitalWrite(10, 1); // turn the LED on 
+
+ 
+ 
+
+ digitalWrite(11, 0); // turn the LED off 
+
+ 
+ 
+
+ digitalWrite(12, 0);  // keep the LED off 
+
+ 
+ 
+
+ digitalWrite(13,0); // keep the LED off 
+
+ 
+ 
+
+ delay(timeDelay);  // LED connected to pin 10 will stay on for 10 ms 
+
+ 
+ 
+
+}  
+
+ 
+ 
+
+ 
