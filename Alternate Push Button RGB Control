@@ -1,0 +1,143 @@
+/*  
+
+Alternate Push Button RGB control program code 
+
+Goal of the program : When the PB is pressed, the RGB has it's Red and Blue turned on. When the PB is not pressed, the RGB has it's Red and Green turned on 
+
+Theme : Digital Input controlling Digital Output  
+
+*/  
+
+ 
+ 
+
+int pushButton = 2; //Associating pin 2 with the PB  
+
+ 
+ 
+
+int red = 12; //Associating pin 12 with the Red color of the RGB      
+
+ 
+ 
+
+int green = 11; //Associating pin 11 with the Green color of the RGB   
+
+ 
+ 
+
+int blue = 10; //Associating pin 10 with the Blue color of the RGB  
+
+ 
+ 
+
+// the setup function runs once when you press reset or power the board  
+
+void setup() {  
+
+ 
+ 
+
+Serial.begin(9600); //Create connection to the serial monitor   
+
+ 
+ 
+
+pinMode(pushButton, INPUT_PULLUP); //The pushButton's pin is set as an INPUT_PULLUP, meaning that it used the resistance of the Arduino  
+
+ 
+ 
+
+// initialize digital pin 10, 11 and 12 as an output.    
+
+ 
+ 
+
+pinMode(12, OUTPUT);  
+
+ 
+ 
+
+pinMode(11, OUTPUT);  
+
+ 
+ 
+
+pinMode(10, OUTPUT);  
+
+ 
+ 
+
+}  
+
+ 
+ 
+
+// the loop routine runs over and over again forever:   
+
+ 
+ 
+
+void loop() {   
+
+ 
+ 
+
+int buttonState = digitalRead(pushButton); //read the value of PB as buttonState   
+
+ 
+ 
+
+// print out the state of the button and it's pin:   
+
+ 
+ 
+
+ Serial.print("buttonState = "); //prints onto the serial monitor " buttonState = "     
+
+ 
+ 
+
+ Serial.print(buttonState); //prints onto the serial monitor the value of the buttonState  
+
+ 
+ 
+
+ Serial.print("\t"); //makes a space in between both values    
+
+ 
+ 
+
+ Serial.print("pushButton = "); //prints onto the serial monitor " pushButton = "     
+
+ 
+ 
+
+ Serial.println(pushButton); //prints the value of the pushButton and then starts a new line on the serial monitor     
+
+ 
+ 
+
+ digitalWrite(red,1); // Reads that the buttonState is always always 1, because the Red color is always on  
+
+ 
+ 
+
+ digitalWrite(green,buttonState); //Will turn on when it reads that the buttonState is read as 1  
+
+ 
+ 
+
+ digitalWrite(blue,!buttonState); //Will turn on when it reads that the buttonState is read as 0  
+
+ 
+ 
+
+ delay(1);  //gives a delay of 1ms in between each print in the serial monitor  
+
+ 
+ 
+
+}  
+
+ 
