@@ -11,7 +11,7 @@ Theme : Digital Input
  
  
 
-int pushButton = 7; // Associating the PB with pin 10  
+int pushButton = 10; // Associating the PB with pin 10  
 
  
  
